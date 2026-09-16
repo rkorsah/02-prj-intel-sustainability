@@ -72,6 +72,7 @@ nav a:focus-visible {
 .nav-links {
 	display: flex;
 	gap: var(--space-medium);
+	flex-wrap: wrap;
 }
 
 header {
@@ -124,6 +125,40 @@ header p {
 	line-height: 1.7;
 }
 
+.highlights {
+	padding: var(--space-large) 32px 0;
+}
+
+.highlight-card {
+	padding: 28px;
+	color: var(--ink);
+	background: var(--surface);
+	border-block-start: 5px solid var(--intel-cyan);
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 45, 85, 0.1);
+}
+
+.col-md-4:nth-child(even) .highlight-card {
+	border-block-start-color: var(--purple);
+}
+
+.highlight-icon {
+	display: block;
+	margin-bottom: 16px;
+	color: var(--intel-blue);
+	font-size: 2.2rem;
+}
+
+.highlight-card h3 {
+	min-height: auto;
+	margin-bottom: 10px;
+}
+
+.highlight-card p {
+	margin: 0;
+	color: var(--muted-ink);
+}
+
 section {
 	position: relative;
 	display: flex;
@@ -164,6 +199,37 @@ section > div {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.highlights {
+	display: block;
+	max-width: none;
+	margin: 0;
+	overflow: visible;
+	scroll-snap-type: none;
+}
+
+.highlights::before,
+.highlights > .container::before {
+	display: none;
+}
+
+.highlights > .container {
+	width: auto;
+	min-height: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	transform: none;
+	transition: none;
+}
+
+.highlights > .container:hover,
+.highlights > .container:focus {
+	transform: none;
+	box-shadow: none;
 }
 
 section > div::before {
@@ -234,6 +300,13 @@ section p {
 	line-height: 1.6;
 	transform: translateY(8px);
 	transition: max-height 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.highlight-card p {
+	max-height: none;
+	opacity: 1;
+	transform: none;
+	transition: none;
 }
 
 section > div:hover p,
@@ -342,6 +415,25 @@ button:hover {
 	background: var(--intel-blue);
 }
 
+.newsletter .form-control {
+	min-height: 46px;
+	border-width: 2px;
+}
+
+.newsletter .btn {
+	min-height: 46px;
+	padding: 10px 22px;
+	color: var(--surface);
+	background: var(--intel-dark-blue);
+	border: 0;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+.newsletter .btn:hover {
+	background: var(--intel-blue);
+}
+
 .timeline-note {
 	margin-top: 24px;
 }
@@ -384,6 +476,11 @@ button:hover {
 	header {
 		min-height: 390px;
 		padding: 56px 22px 64px;
+	}
+
+	.highlights {
+		display: block;
+		padding: 40px 22px 0;
 	}
 
 	header img {
