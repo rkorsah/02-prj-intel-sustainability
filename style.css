@@ -23,6 +23,40 @@ body {
 	line-height: 1.5;
 }
 
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-medium);
+	min-height: 64px;
+	padding: 12px 32px;
+	background: var(--surface);
+	border-bottom: 1px solid #d6e2ee;
+	box-shadow: 0 2px 10px rgba(0, 45, 85, 0.08);
+}
+
+nav a {
+	color: var(--intel-dark-blue);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	color: var(--intel-blue);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+.nav-brand {
+	font-size: 1.1rem;
+}
+
+.nav-links {
+	display: flex;
+	gap: var(--space-medium);
+}
+
 header {
 	min-height: 430px;
 	padding: 80px 24px;
@@ -157,6 +191,17 @@ body > p {
 }
 
 @media (max-width: 768px) {
+	nav {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 8px;
+		padding: 16px 22px;
+	}
+
+	.nav-links {
+		gap: var(--space-small);
+	}
+
 	header {
 		min-height: 390px;
 		padding: 56px 22px 64px;
