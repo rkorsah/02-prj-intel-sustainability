@@ -50,6 +50,8 @@ nav a:focus-visible {
 
 .nav-brand {
 	font-size: 1.1rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 }
 
 .nav-links {
@@ -58,6 +60,7 @@ nav a:focus-visible {
 }
 
 header {
+	position: relative;
 	min-height: 430px;
 	padding: 80px 24px;
 	display: flex;
@@ -67,6 +70,17 @@ header {
 	color: #ffffff;
 	background: var(--intel-dark-blue);
 	border-bottom: 8px solid var(--intel-cyan);
+}
+
+header::after {
+	position: absolute;
+	right: 32px;
+	bottom: 24px;
+	width: 56px;
+	height: 8px;
+	content: "";
+	background: var(--intel-cyan);
+	box-shadow: -72px 0 0 var(--intel-blue), -144px 0 0 #ffffff;
 }
 
 header > div {
@@ -96,6 +110,7 @@ header p {
 }
 
 section {
+	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
 	gap: 24px;
@@ -112,7 +127,18 @@ section {
 	align-items: stretch;
 }
 
+section::before {
+	position: absolute;
+	top: 32px;
+	left: 32px;
+	right: 32px;
+	height: 2px;
+	content: "";
+	background: #b9d3e5;
+}
+
 section > div {
+	position: relative;
 	flex: 0 0 280px;
 	width: 280px;
 	min-height: 330px;
@@ -124,6 +150,27 @@ section > div {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+section > div::before {
+	position: absolute;
+	top: -23px;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	content: "";
+	background: var(--intel-cyan);
+	border: 4px solid var(--page);
+	border-radius: 50%;
+	transform: translateX(-50%);
+}
+
+section > div:nth-child(even) {
+	border-top-color: var(--intel-blue);
+}
+
+section > div:nth-child(even)::before {
+	background: var(--intel-blue);
 }
 
 section img {
@@ -241,6 +288,11 @@ body > p {
 		padding: 40px 22px 24px;
 		overflow: visible;
 		scroll-snap-type: none;
+	}
+
+	section::before,
+	section > div::before {
+		display: none;
 	}
 
 	section > div {
