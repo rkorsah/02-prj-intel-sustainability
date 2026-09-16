@@ -1,1 +1,129 @@
-/* Add your CSS here */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: #172b4d;
+	background: #f5f7fa;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	min-height: 430px;
+	padding: 72px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #ffffff;
+	background: #005b9a;
+	background: linear-gradient(135deg, #003c71 0%, #0071c5 55%, #00a3e0 100%);
+}
+
+header > div {
+	width: 100%;
+	max-width: 760px;
+}
+
+header img {
+	width: 150px;
+	height: auto;
+	margin-bottom: 32px;
+}
+
+h1 {
+	margin: 0 0 20px;
+	font-size: clamp(2.3rem, 6vw, 4.5rem);
+	line-height: 1.05;
+	letter-spacing: 0;
+}
+
+header p {
+	max-width: 650px;
+	margin: 0 auto;
+	font-size: 1.15rem;
+	line-height: 1.7;
+}
+
+section {
+	display: flex;
+	gap: 24px;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 64px 32px 32px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+}
+
+section > div {
+	flex: 0 0 280px;
+	min-height: 330px;
+	padding: 28px;
+	border-top: 6px solid #00c7fd;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 8px 24px rgba(0, 45, 85, 0.12);
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+section > div:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 14px 30px rgba(0, 45, 85, 0.2);
+}
+
+h2 {
+	margin: 0 0 14px;
+	color: #0071c5;
+	font-size: 2rem;
+}
+
+h3 {
+	margin: 0 0 16px;
+	color: #172b4d;
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+
+section p {
+	margin: 0;
+	color: #45556f;
+	line-height: 1.6;
+}
+
+body > p {
+	margin: 12px 24px 48px;
+	color: #56657a;
+	text-align: center;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+	header {
+		min-height: 390px;
+		padding: 56px 22px;
+	}
+
+	header img {
+		width: 125px;
+		margin-bottom: 24px;
+	}
+
+	header p {
+		font-size: 1rem;
+		line-height: 1.55;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		padding: 40px 22px 24px;
+		overflow-x: visible;
+	}
+
+	section > div {
+		flex-basis: auto;
+		min-height: auto;
+	}
+}
