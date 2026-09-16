@@ -2,6 +2,7 @@
 	--intel-blue: #0068b5;
 	--intel-dark-blue: #003c71;
 	--intel-cyan: #00c7fd;
+	--lavender: #dcd6f7;
 	--ink: #172b4d;
 	--muted-ink: #45556f;
 	--page: #eef3f8;
@@ -67,8 +68,8 @@ header {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: #ffffff;
-	background: var(--intel-dark-blue);
+	color: var(--ink);
+	background: var(--lavender);
 	border-bottom: 8px solid var(--intel-cyan);
 }
 
