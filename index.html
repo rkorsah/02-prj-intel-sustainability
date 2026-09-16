@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +8,14 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#timeline">Skip to timeline</a>
+
   <nav aria-label="Main navigation">
     <a class="nav-brand" href="#top">Intel Sustainability</a>
     <div class="nav-links">
       <a href="#top">Home</a>
       <a href="#timeline">Timeline</a>
+      <a href="#newsletter">Newsletter</a>
     </div>
   </nav>
 
@@ -146,6 +149,21 @@
       </p>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+    <div>
+      <h2 id="newsletter-title">Stay informed about sustainability</h2>
+      <p>Receive occasional updates about Intel's progress, goals, and sustainability initiatives.</p>
+      <form action="#newsletter" method="post">
+        <label for="newsletter-email">Email address</label>
+        <div class="form-row">
+          <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <p class="timeline-note">Scroll to view the timeline. Hover over or focus a card to learn more.</p>
 </body>
 </html>
